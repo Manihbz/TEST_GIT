@@ -25,11 +25,8 @@ class GHEConfig:
         """Build the base API URL for the GHE instance."""
         if self.hostname == 'api.github.com':
             return f'https://{self.hostname}'
-        elif self.hostname.endswith('.ghe.com'):
-            # GitHub Enterprise Cloud instances
-            return f'https://{self.hostname}/api/v3'
         else:
-            # GitHub Enterprise Server instances
+            # GitHub Enterprise Cloud (*.ghe.com) and Server instances
             return f'https://{self.hostname}/api/v3'
     
     def get_api_url(self, endpoint):
