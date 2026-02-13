@@ -5,7 +5,6 @@ GHE Instance Information Utility
 This script helps identify and display GitHub Enterprise (GHE) instance information.
 """
 
-import os
 import subprocess
 import sys
 
@@ -35,7 +34,8 @@ def parse_ghe_instance(url):
     # Remove protocol if present
     for protocol in ['https://', 'http://', 'ssh://']:
         if url.startswith(protocol):
-            url = url.replace(protocol, '')
+            url = url[len(protocol):]
+            break
     
     # Extract the host (first part before /)
     parts = url.split('/')
