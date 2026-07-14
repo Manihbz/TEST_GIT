@@ -1,0 +1,7 @@
+{
+  "bundle": "t001_testa",
+  "source_file": "TEST_script/testa.sas",
+  "source_blob_sha": "81d295a85ee7960b38267e132f862d79123e0d14",
+  "source_commit": "95a8ba5c62612b4c2cc1c840a1093e360390f5a6",
+  "notes": "Self-contained script: builds a 5-row WORK.test dataset via inline DATALINES (id/name/age), then PROC PRINT with title and PROC MEANS var age. Shipped byte-identical (no edits needed - no external libnames, paths, or data files). Autoexec adds only options obs=100."
+}
